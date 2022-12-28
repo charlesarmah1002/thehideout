@@ -303,16 +303,18 @@ nav {
 /* featured section with cards */
 .featured-cards {
     display: flex;
+    flex-direction: row;
     align-items: center;
-    justify-content: space-between; 
+    justify-content: space-around; 
     width: 90%;
+    position: relative;
+    margin: auto;
 }
 
 /* cards section */
 .card-section {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    float: left;
 }
 .card-section .card {
     width: 150px;
@@ -359,3 +361,51 @@ nav {
 }
 
 /* rank table */
+.rank-section {
+    display: grid;
+    grid-template-columns: auto;
+    margin: 10px auto;
+    width: 100%;
+}
+.rank-section .title {
+    text-align: center;
+    font-size: 25px;
+}
+.rank {
+    line-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 400px;
+    width: 100%;
+    border-radius: 10px;
+    margin: 5px auto;
+    transition: scale 0.3s ease;
+    border: solid 1px transparent;
+}
+.rank:hover {
+    scale: 1.02;
+    border: #fdfefe solid 1px;
+}
+.rank:nth-child(odd){
+    background: #212b3d;
+}
+.rank:nth-child(even) {
+    background: #575555;
+}
+@media screen and (max-width: 400px) {
+    .featured-cards {
+        flex-direction: column;
+    }
+    .card-section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+@media screen and (max-width: 900px){
+    .featured-cards {
+        flex-direction: column;
+    }
+}
