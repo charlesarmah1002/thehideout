@@ -11,6 +11,9 @@
     src: url(../fonts/Poppins/Poppins-Black.ttf);
 }
 
+
+
+
 *{
     margin: 0;
     padding: 0;
@@ -19,7 +22,7 @@
     color: #fdfefe;
 }
 body {
-    background: linear-gradient(175deg, red 0%, black 100%) no-repeat;
+    background: linear-gradient(-135deg, #575555 0%, black 100%) no-repeat;
     min-height: 120vh;
 }
 
@@ -58,6 +61,14 @@ nav {
     -moz-text-fill-color: transparent;
     font-size: 40px;
     font-family: poppins-black;
+}
+@media screen and (max-width: 500px) {
+    .logo {
+        font-size: 20px;
+    }
+    .logo span {
+        font-size: 30px;
+    }
 }
 .menu {
     display: flex;
@@ -149,11 +160,11 @@ nav {
     align-items: center;
     justify-content: flex-end;
     flex-direction: column;
+    padding: 15px;
     padding-bottom: 50px;
     font-size: 20px;
     background: #0d0d0d90;
 }
-
 .swiper-slide {
     text-align: center;
     font-size: 18px;
@@ -173,7 +184,6 @@ nav {
     -webkit-align-items: center;
     align-items: center; */
 }
-
 .swiper-slide img {
     display: block;
     position: absolute;
@@ -190,4 +200,9 @@ nav {
     background: #0d0d0d90;
     padding: 10px;
     margin: 10px;
+    border-radius: 10px;
+    transition: background 0.3s ease;
+}
+.button-default:hover {
+    background: #0d0d0d;
 }
