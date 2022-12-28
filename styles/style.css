@@ -23,7 +23,7 @@
 }
 body {
     background: linear-gradient(-135deg, #575555 0%, black 100%) no-repeat;
-    min-height: 120vh;
+    min-height: 200vh;
 }
 
 /* navigation */
@@ -205,4 +205,76 @@ nav {
 }
 .button-default:hover {
     background: #0d0d0d;
+}
+
+
+/* blog section */
+.blog-excepts {
+    width: 100%;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.blog-excepts .upcoming-banner {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    height: 40vh;
+    overflow: hidden;
+    margin: 20px auto;
+}
+.blog-excepts .upcoming-banner .left {
+    background: url(../images/akatsuki-background.jpg) #0d0d0d70 center;
+    background-size: cover;
+    background-blend-mode: multiply;
+    height: 100%;
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    text-align: center;
+    border-top-left-radius: 20px;
+    padding: 20px 0;
+}
+.blog-excepts .upcoming-banner .left .title {
+    font-size: 30px;
+    text-transform: uppercase;
+    font-family: secular-one, sans-serif;
+    border-bottom: 2px solid;
+}
+.blog-excepts .upcoming-banner .left .content,
+.blog-excepts .upcoming-banner .left .timer {
+    width: 80%;
+    font-size: 20px;
+}
+.blog-excepts .upcoming-banner .left .button-default {
+    background: #57555580;
+    transition: background 0.3s ease;
+    border: 2px solid #fdfefe70;
+}
+.blog-excepts .upcoming-banner .left .button-default:hover {
+    background: #575555;
+}
+.blog-excepts .upcoming-banner .right {
+    width: 60%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    border-bottom-right-radius: 20px;
+}
+.blog-excepts .upcoming-banner .right img {
+    object-fit: cover;
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: scale 0.3s ease;
+    opacity: 0.8;
+}
+.blog-excepts .upcoming-banner .right img:hover {
+    scale: 1.1;
 }
