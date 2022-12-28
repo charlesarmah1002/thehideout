@@ -393,7 +393,7 @@ nav {
 .rank:nth-child(even) {
     background: #575555;
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 450px) {
     .featured-cards {
         flex-direction: column;
     }
