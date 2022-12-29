@@ -347,7 +347,6 @@ nav a {
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    border-radius: 20px;
     border: solid;
     transition: scale 0.4s ease;
     position: relative;
@@ -388,6 +387,43 @@ nav a {
     position: relative;
     right: 0;
 }
+
+/* schedule */
+.schedules {
+    width: 400px;
+    margin: auto;
+}
+.dates {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 100%;
+    overflow: hidden;
+    background: linear-gradient(to right, #fdfefe71 0%, transparent , #fdfefe71 100%);
+}
+.dates li {
+    text-align: center;
+    width: fit-content;
+    margin: 10px;
+}
+.shows {
+    width: 100%;
+    text-align: left;
+    list-style: none;
+}
+.shows li:nth-child(odd){
+    line-height: 50px;
+    padding-left: 15px;
+}
+.shows li:nth-child(even){
+    padding-left: 15px;
+    line-height: 50px;
+    background: #575555;
+}
+
 /* rank table */
 .rank-section {
     display: grid;
