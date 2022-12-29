@@ -20,6 +20,8 @@
     font-family: poppins-regular, sans-serif;
     box-sizing: border-box;
     color: #fdfefe;
+    scroll-behavior: smooth;
+    scroll-padding-top: 20px;
 }
 body {
     background: linear-gradient(-135deg, #212b3d 0%, rgb(28, 30, 41) 100%) no-repeat;
@@ -41,6 +43,9 @@ nav {
     top: 0;
     z-index: 999;
 }
+nav a {
+    text-decoration: none;
+}
 .navigation-container {
     display: flex;
     align-items: center;
@@ -51,7 +56,7 @@ nav {
 .logo {
     font-size: 30px;
     text-transform: uppercase;
-    font-family: secular-one;
+    font-family: secular-one, sans-serif;
     display: flex;
     align-items: center;
 }
@@ -304,7 +309,7 @@ nav {
 .featured-cards {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-around; 
     width: 90%;
     position: relative;
@@ -312,6 +317,22 @@ nav {
 }
 
 /* cards section */
+.card-section-container .section-title{
+    font-size: 30px;
+    font-family: secular-one, sans-serif;
+    margin-top: 30px;
+    position: relative;
+}
+.card-section-container .section-title::after{
+    content: "";
+    width: 300px;
+    height: 5px;
+    background: #fdfefe;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 30px;
+}
 .card-section {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -382,6 +403,8 @@ nav {
     margin: 5px auto;
     transition: scale 0.3s ease;
     border: solid 1px transparent;
+    text-decoration: none;
+    box-shadow: #fdfefe 2px 2px 5px;
 }
 .rank:hover {
     scale: 1.02;
@@ -393,7 +416,17 @@ nav {
 .rank:nth-child(even) {
     background: #575555;
 }
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 700px){
+    .card-section {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+@media screen and (max-width: 900px){
+    .featured-cards {
+        flex-direction: column;
+    }
+}
+@media screen and (max-width: 529px) {
     .featured-cards {
         flex-direction: column;
     }
@@ -402,10 +435,5 @@ nav {
         grid-template-columns: 1fr 1fr;
         width: 100%;
         margin-bottom: 20px;
-    }
-}
-@media screen and (max-width: 900px){
-    .featured-cards {
-        flex-direction: column;
     }
 }
