@@ -294,13 +294,14 @@ nav a {
         margin: 5px auto;
     }
     .blog-excepts .upcoming-banner .left .title {
-        font-size: 20px;
+        font-size: 15px;
     }
     .blog-excepts .upcoming-banner .left .content {
         display: none;
     }
     .blog-excepts .upcoming-banner .left .button-default {
-        font-size: 16px;
+        font-size: 14px;
+        padding: 5px;
     }
 }
 
@@ -422,12 +423,12 @@ nav a {
 }
 @media screen and (max-width: 900px){
     .featured-cards {
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
 }
 @media screen and (max-width: 529px) {
     .featured-cards {
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
     .card-section {
         display: grid;
