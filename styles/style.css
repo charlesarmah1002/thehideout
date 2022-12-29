@@ -381,6 +381,13 @@ nav a {
     opacity: 1;
 }
 
+
+/* container for ranked section and schedule */
+.c-and-r-container {
+    width: 100%;
+    position: relative;
+    right: 0;
+}
 /* rank table */
 .rank-section {
     display: grid;
