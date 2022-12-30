@@ -25,7 +25,7 @@
 }
 body {
     background: linear-gradient(-135deg, #212b3d 0%, rgb(28, 30, 41) 100%) no-repeat;
-    min-height: 200vh;
+    min-height: 200vh;  
 }
 
 /* navigation */
@@ -143,7 +143,7 @@ nav a {
 }
 @media screen and (max-width: 900px) and (orientation: landscape){
     .menu {
-        display: grid;
+        display: grid;``
         grid-template-columns: 1fr 1fr;
     }
 }
@@ -169,26 +169,9 @@ nav a {
     padding-bottom: 50px;
     font-size: 20px;
     background: #0d0d0d90;
-}
-.swiper-slide {
     text-align: center;
-    font-size: 18px;
-    background: #1313;
-    
-    /* Center slide text vertically */
-    /* display: -webkit-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    -webkit-justify-content: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    align-items: center; */
 }
+
 .swiper-slide img {
     display: block;
     position: absolute;
@@ -390,8 +373,10 @@ nav a {
 
 /* schedule */
 .schedules {
+    max-width: 100%;
     width: 400px;
     margin: auto;
+    margin-bottom: 50px;
 }
 .dates {
     list-style: none;
@@ -403,11 +388,39 @@ nav a {
     width: 100%;
     overflow: hidden;
     background: linear-gradient(to right, #fdfefe71 0%, transparent , #fdfefe71 100%);
+    position: relative;
+}
+.dates::before {
+    position: absolute;
+    background: #00000070;
+    content: '';
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    top: 0;
+    left: 0;
 }
 .dates li {
     text-align: center;
     width: fit-content;
     margin: 10px;
+    position: relative;
+}
+.dates li::after {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    content: '';
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background: #0d0d0d;
+}
+.dates li::after:hover {
+    background: #0d0d0d41;
+}
+.dates li.active {
+    z-index: 11;
 }
 .shows {
     width: 100%;
@@ -417,12 +430,15 @@ nav a {
 .shows li:nth-child(odd){
     line-height: 50px;
     padding-left: 15px;
+    overflow: hidden;
 }
 .shows li:nth-child(even){
     padding-left: 15px;
     line-height: 50px;
     background: #575555;
+    overflow: hidden;
 }
+
 
 /* rank table */
 .rank-section {
