@@ -307,17 +307,6 @@ nav a {
     margin-top: 30px;
     position: relative;
 }
-.card-section-container .section-title::after{
-    content: "";
-    width: 300px;
-    height: 3px;
-    background: #fdfefe;
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: 30px;
-    transform: translate(0, -50%);
-}
 .card-section {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -364,17 +353,10 @@ nav a {
 }
 
 
-/* container for ranked section and schedule */
-.c-and-r-container {
-    width: 100%;
-    position: relative;
-    right: 0;
-}
-
 /* schedule */
 .schedules {
-    max-width: 100%;
-    width: 400px;
+    width: 80%;
+    min-width: 400px;
     margin: auto;
     margin-bottom: 50px;
 }
@@ -382,42 +364,21 @@ nav a {
     list-style: none;
     display: flex;
     flex-direction: row;
-    justify-content: center;
     align-items: center;
+    justify-content: space-between;
     margin: auto;
     width: 100%;
     overflow: hidden;
-    background: linear-gradient(to right, #fdfefe71 0%, transparent , #fdfefe71 100%);
     position: relative;
-}
-.dates::before {
-    position: absolute;
-    background: #00000070;
-    content: '';
-    width: 100%;
-    height: 100%;
-    z-index: 10;
-    top: 0;
-    left: 0;
+    background: #575555;
 }
 .dates li {
     text-align: center;
     width: fit-content;
-    margin: 10px;
+    background: #212b3d71;
+    backdrop-filter: blur(3px);
+    padding: 20px;
     position: relative;
-}
-.dates li::after {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    content: '';
-    top: 0;
-    left: 0;
-    z-index: 999;
-    background: #0d0d0d;
-}
-.dates li::after:hover {
-    background: #0d0d0d41;
 }
 .dates li.active {
     z-index: 11;
